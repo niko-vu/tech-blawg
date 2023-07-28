@@ -19,7 +19,7 @@ N/a
 
 N/a
 
-The application routes:
+The deployed application should look like this:
 
 ![Screenshot of the application.](./assets/screenshot.png)
 
