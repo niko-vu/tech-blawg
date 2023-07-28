@@ -2,33 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blawg</title>
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blawg</title>
+    <link rel="stylesheet" href="/css/jass.css">
 </head>
 
 <body>
-  <header class="header-style">
-    <h1>
-      tech blawg
-    </h1>
-    {{#if signed_in}}
-    <nav>
-      <button class="btn" id="signout">sign out</button>
-    </nav>
-    {{/if}}
-  </header>
-  <main class="container-1">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+    <header class="display-flex justify-space-around align-center">
+        <h1>
+            Tech Blawg
+        </h1>
+    </header>
+    <header class="display-flex justify-space-around align-center">
+        <a style="font-size: 20px" href="/">Home</a>
+        <a style="font-size: 20px" href="/dashboard">Dashboard</a>
+        {{#if logged_in}}
+        <a href="/logout">Logout</a>
+        {{/if}}
+    </header>
+    <main class="container container-fluid mt-5">
+        {{{ body }}}
+    </main>
+    <footer>
 
-  {{#if signed_in}}
-  <script src="/js/signout.js"></script>
-  {{/if}}
+    </footer>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
